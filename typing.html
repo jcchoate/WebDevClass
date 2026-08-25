@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Falling Lexicon</title>
+    <style>
+        :root {
+            --bg-color: #1a1a2e;
+            --text-color: #e94560;
+            --word-bg: #16213e;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-color);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden; /* Prevents scrollbars during game */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #game-header {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 10;
+        }
+
+        #game-container {
+            position: relative;
+            width: 80vw;
+            height: 80vh;
+            border: 2px solid var(--text-color);
+            margin-top: 20px;
+            background: var(--word-bg);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .word {
+            position: absolute;
+            padding: 8px 15px;
+            background: var(--text-color);
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            white-space: nowrap;
+            transition: transform 0.1s linear;
+        }
+
+        #input-display {
+            margin-top: 20px;
+            font-size: 2rem;
+            color: #4ecca3;
+            min-height: 2.5rem;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="game-header">
+        <div>Score: <span id="score">0</span></div>
+        <div>Lives: <span id="lives">3</span></div>
+    </div>
+
+    <div id="game-container">
+        <!-- Words will be injected here by JS -->
+    </div>
+
+    <div id="input-display"></div>
+
+    <script>
+        // Logic will go here
+    </script>
+</body>
+</html>
